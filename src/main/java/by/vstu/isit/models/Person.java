@@ -1,19 +1,16 @@
 package by.vstu.isit.models;
 
-import lombok.AccessLevel;
+import java.time.LocalDate;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.experimental.FieldDefaults;
 
-import java.time.LocalDate;
-
-@FieldDefaults(level = AccessLevel.PRIVATE)
 @Data
 @AllArgsConstructor
 @Builder
-class Person {
-    String name;
+public class Person {
+    private String name;
     int age;
     Address address;
     String email;

@@ -6,7 +6,7 @@ import lombok.experimental.FieldDefaults;
 
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Data
-class PersonDto {
+public class PersonDto {
     String firstName;
     int age;
     String city;

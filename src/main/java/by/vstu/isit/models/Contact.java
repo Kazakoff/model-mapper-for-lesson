@@ -10,7 +10,7 @@ import lombok.experimental.FieldDefaults;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-class Contact {
+public class Contact {
     String email;
     String phone;
 }
