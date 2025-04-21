@@ -19,6 +19,15 @@ public class App {
                 return source == null ? null : source.toUpperCase();
             }
         };
+
+        Provider<String> personProvider = new AbstractProvider<String>() {
+            public String get() {
+                return "Пользовательский поставщик";
+
+            }
+
+        };
+
         personToDto.addMappings(mapper -> mapper.using(toUppercase).map(Person::getName, PersonDto::setFirstName));
         personToDto.addMapping(x -> x.getAddress().getCity(), PersonDto::setCity);
         personToDto.addMapping(x -> x.getAddress().getStreet(), PersonDto::setStreet);
